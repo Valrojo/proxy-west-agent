@@ -21,11 +21,11 @@
 </style>
 </head>
 <body>
-<p id="msg">Abriendo la oficina de agentes…</p>
-<noscript><p>Esta página necesita JavaScript. <a id="enlace" href="https://begins-interact-cork-clocks.trycloudflare.com/office">Abrir la oficina</a></p></noscript>
+<p id="msg">Abriendo el panel de agentes…</p>
+<noscript><p>Esta página necesita JavaScript. <a id="enlace" href="https://begins-interact-cork-clocks.trycloudflare.com/">Abrir el panel de agentes</a></p></noscript>
 <script>
-  // ← ÚNICA línea que se cambia cuando el túnel cambia de dirección (sin barra final, con /office)
-  const DESTINO = 'https://begins-interact-cork-clocks.trycloudflare.com/office';
+  // ← ÚNICA línea que se cambia cuando el túnel cambia de dirección (la raíz del servidor: el panel pide el token)
+  const DESTINO = 'https://begins-interact-cork-clocks.trycloudflare.com/';
 
   location.replace(DESTINO + location.search + location.hash);
 </script>
