@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Agentes</title>
+<!--
+  Puente a la oficina de agentes. Esta página no tiene nada más que una dirección.
+
+  PARA CAMBIAR LA URL (cuando el túnel de Cloudflare cambie): edita SOLO la constante DESTINO de abajo y vuelve a desplegar en Vercel.
+  La página de producción no se toca: sigue embebiendo esta misma dirección de Vercel.
+
+  Qué pasa al abrirla: reemplaza la dirección por DESTINO y conserva lo que venga después de la dirección de Vercel
+  (?vista=… y #ver=… del enlace de solo mirar). El #ver=… nunca viaja al servidor: lo lee solo el navegador.
+-->
+<style>
+  :root { color-scheme: light dark; }
+  body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: Canvas; color: CanvasText;
+         font: 15px/1.5 system-ui, sans-serif; padding: 16px; box-sizing: border-box; text-align: center; }
+</style>
+</head>
+<body>
+<p id="msg">Abriendo la oficina de agentes…</p>
+<noscript><p>Esta página necesita JavaScript. <a id="enlace" href="https://begins-interact-cork-clocks.trycloudflare.com/office">Abrir la oficina</a></p></noscript>
+<script>
+  // ← ÚNICA línea que se cambia cuando el túnel cambia de dirección (sin barra final, con /office)
+  const DESTINO = 'https://begins-interact-cork-clocks.trycloudflare.com/office';
+
+  location.replace(DESTINO + location.search + location.hash);
+</script>
+</body>
+</html>
